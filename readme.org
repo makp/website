@@ -9,6 +9,6 @@ Personal website.
     output of this script is used by all the course schedules in the
     latex folder.
   - html-parser.py: produces HTML pages from LaTeX files by running
-    `htlatex` (generate-html.sh) and processing the HTLM with the python
-    module BeautifulSoup.
+    ~htlatex~ (generate-html.sh) and processes the HTML output with
+    the Python module ~BeautifulSoup~.
 - latex/ ::
