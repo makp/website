@@ -104,6 +104,19 @@ class TeachingSched3(webapp2.RequestHandler):
         template = jinja_env.get_template('schedule.html')
         self.response.write(template.render(template_values))
 
+class TeachingSched4(webapp2.RequestHandler):
+    def get(self):
+        template_values = {
+            'title': "The Evolution of Complexity",
+            'number': "PHIL460",
+            'semester': "Spring 2019",
+            # 'source': 'includes/schedule_s19_phil255.html',
+            'id_jump': id_jump,
+            'week_jump': week_jump
+        }
+        template = jinja_env.get_template('schedule.html')
+        self.response.write(template.render(template_values))
+
         
 # URL mapping section
 application = webapp2.WSGIApplication([
@@ -114,4 +127,5 @@ application = webapp2.WSGIApplication([
     ('/schedule1', TeachingSched1),
     ('/schedule2', TeachingSched2),
     ('/schedule3', TeachingSched3),
+    ('/schedule4', TeachingSched4),
 ], debug=True)
