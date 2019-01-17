@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[american]{babel}
+
+\usepackage[backend=biber,refsection=section,sorting=ydnt,style=authoryear]{biblatex}
+\usepackage{biblatex-tweaks}
+
+\usepackage{hyperref}
+\addbibresource{/home/makmiller/Documents/mydocs/tex-configs/references/my-pubs.bib}
+
+\usepackage{graphicx}
+
+\usepackage{lineno}
+\usepackage{setspace}
+
+\author{ }
+
+\date{}
+
+\title{Research}
+
+\begin{document}
+
+% \maketitle
+\onehalfspacing{}
+
+% \tableofcontents
+
+%% ===============
+%% custom commands
+%% ===============
+
+\renewcommand{\url}[1]{\href{#1}{\underline{PDF}}}
+
+%% ====
+%% Text
+%% ====
+
+\section{The Ecology of Cooperation \& Conflict}
+
+\nocite{pedrosoed:_impac}
+
+\printbibliography[heading=none]
+
+\section{The Evolution of Biological Individuals}
+
+One striking feature about life is that, instead of being distributed
+homogeneously on Earth's surface, it is clustered into biological
+individuals, such as ants, dogs, and beehives. But why would
+free-living individuals (e.g., single cells) forgo their independent
+existence and merge into higher-level individuals (e.g., multicellular
+organisms)? The goal of this project is to address this issue by using
+biofilms and other microbial communities as case studies.
+
+\nocite{pedrosong:_formin_lineag_stick_toget,pedroso2016inheritance,
+  ereshefskyth:_rethin_evolut_indiv,
+  ereshefskyth:_what_biofil_can_teach_us_about_indiv,
+  ereshefskyss:_biolog}
+
+\printbibliography[heading=none]
+
+
+\section{The Role of Common Ancestry in Biological Classification}
+
+The classification of organisms into species and higher taxa is often
+genealogical. For instance, \emph{Homo sapiens} belongs to the order
+Primates because humans descended from earlier primates. Once we take
+a closer look at how common ancestry fixes the membership conditions
+of biological taxa, however, a series of problems opens up. `What is a
+common ancestor?' `Are microbial species best viewed as lineage
+segments given that microbes can exchange genes horizontally?' The
+goal of this project is to investigate these and other problems taking
+into account the role of common ancestry in biological classification.
+
+\nocite{pedroso12:_essen_histor_biolog_taxa, pedroso2013origin}
+
+\printbibliography[heading=none]
+
+\end{document}
+
+%%% Local Variables:
+%%% TeX-master: t
+%%% End:
