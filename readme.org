@@ -1,0 +1,11 @@
+- app.yaml
+  Tells App Engine how to map URLs
+- pages/
+  Stores HTML pages
+- scripts/
+  - make-schedule/make-schedule.nb :: returns the dates I have to
+       teach. The output of this script is used by all the course
+       schedules.
+  - html-parser.py :: produces HTML pages from LaTeX files by running
+                      htlatex (generate-html.sh) and processing the
+                      HTLM with the python module BeautifulSoup.
