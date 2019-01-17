@@ -50,6 +50,4 @@ schedules]
   \end{itemize}}
 
 \DeclareFieldFormat{url}{%
-  \ifhyperref{}
-    {\href{#1}{Link}}
-    {\url{#1}}}
+  \ifhyperref{\href{#1}{Link}}{\url{#1}}}
