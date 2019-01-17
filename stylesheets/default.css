@@ -1,0 +1,330 @@
+body,textarea,input,select{
+   background:0;
+   border-radius:0;
+   font-family: 'Roboto', 'Open Sans', 'Arial', sans-serif;
+   font-size:1.3em;
+   color:#323232;
+   margin:0
+}
+
+/* formatting for text below the nav bar and before footer */
+
+.container{
+   margin:0 1.25em; /* top, right, bottom, left */
+   width:auto;
+}
+
+.container a{
+   color:#00204a; /* #777 */
+   text-decoration:none;
+}
+
+
+/* format for small text */
+
+.note{
+   font-size: .8em;
+   color: #777;
+}
+
+
+.note h4{
+   margin-bottom: 0;
+}
+
+
+/* format for latex docs */
+
+.latex a{
+   color: #005d7f
+}
+
+.latex h3{
+   margin-bottom: .2em;
+}
+
+.latex h4{
+   margin-top: .2em;
+}
+
+/* page title */
+
+.maketitle{
+   border-bottom: 1.5px solid #777;
+   margin-bottom: 1em;
+}
+
+.maketitle h2{
+   margin-bottom: 0.1em;
+}
+
+.maketitle h4{
+   margin-top: 0.1em;
+   margin-bottom: .6em;
+}
+
+
+/* p tag */
+
+p{
+   margin-top:0;
+}
+
+
+/* h tags */
+
+h1,h2,h3,h4,h5{
+   font-family: 'Open Sans', sans-serif;
+   margin-bottom:.35em;
+}
+
+h1{
+   font-size:1.8em;
+}
+
+
+h2{
+   font-size:1.6em;
+}
+
+h3{
+   font-size:1.4em;
+}
+
+h4{
+   font-size:1.2em;
+}
+
+h4:target{
+   animation: hilight 1.3s forwards;
+}
+@keyframes hilight{
+   10% {background: #f8f99a;}
+   100% {background: transparent;}
+}
+
+
+h5{
+   font-size:1em;
+   margin: 0;
+}
+
+
+/* Gray box */
+
+.gbox{
+   background: #eee;
+   border-radius: 10px;
+}
+
+.gbox h2 {
+   margin-top: 0;
+   margin-bottom: 0.3em;
+}
+
+
+/* Columns */
+
+.row{
+   margin:1% 0;
+   overflow:auto
+}
+
+.col{
+   float:left;
+}
+
+/* Two columns */
+
+.c2{
+   margin-top: 1em;
+   padding: 1.25em;
+   box-sizing:border-box;
+   width:50%;
+}
+
+.c2 h3 {
+   margin-top: 0;
+}
+
+.c2 a {
+   display: inline-block;
+}
+
+
+.addon,.btn-sm,.nav,textarea,input,select{
+   outline:0;
+   font-size:.8em
+}
+
+.smooth{
+   transition:all .2s
+}
+
+
+/* class to obfuscate  email */
+span.reverse {
+   unicode-bidi: bidi-override;
+   direction: rtl;
+}
+
+
+/* Bottoms */
+
+.btn{
+   font-size:1em;
+   background:#999;
+   border-radius:3px;
+   border:0;
+   cursor:pointer;
+   display:inline-block;
+   margin:2px 0;
+   padding:8px 30px 14px
+}
+
+
+.btn,.nav a{
+   text-decoration:none
+}
+
+
+.btn:hover{
+   background:#888
+}
+
+.btn:active,.btn:focus{
+   background:#777
+}
+
+.btn-sm{
+   border-radius:2px;
+   padding:5px 7px 5px
+}
+
+
+.btn-a{
+   color: #777 !important;
+   background:transparent;
+   border: 2px solid #e0e0e0
+}
+
+.btn-a:hover{
+   background:#85a5bd42
+}
+
+.btn-a:active,.btn-a:focus{
+   background:#85a5bd78
+}
+
+
+.btn.btn-close{
+   background:#323232;
+   float:right;
+   font-size:1.5em;
+   margin:-1.5em 28px;
+   display:none;
+   padding:0;
+}
+
+
+/* label>*{ */
+/*     display:inline */
+/* } */
+
+/* form>*{ */
+/*     display:block; */
+/*     margin-bottom:10px */
+/* } */
+
+/* textarea,input,select{ */
+/*     border:1px solid #ccc; */
+/*     padding:8px */
+/* } */
+
+/* textarea:focus,input:focus,select:focus{ */
+/*     border-color:#5ab */
+/* } */
+
+/* textarea,input[type=text]{ */
+/*     -webkit-appearance:none; */
+/*     width:13em; */
+/*     outline:0 */
+/* } */
+
+/* .addon{ */
+/*     box-shadow:0 0 0 1px #ccc; */
+/*     padding:8px 12px */
+/* } */
+
+.nav,.nav .current,.nav a:hover{
+   background:#323232;
+   /* background:#000; */
+   color:#fff
+}
+
+.nav{
+   height:2em;
+   padding:1em .2em 1em 	/*above, sides, bottom*/
+}
+
+.nav a{
+   color:#aaa;
+   padding-right:1em;
+   position:relative;
+   font-size:1.1em;
+   top:0
+}
+
+.nav .pagename{
+   font-size:2.2em;
+   top:.05em
+}
+
+
+@media(min-width:1310px){
+   .container{
+      margin:auto;
+      width:1270px
+   }
+}
+
+
+@media(max-width:870px){
+   .row .col{width:100%}
+}
+
+
+@media(max-width:715px){
+   body {
+      font-size: 1em;
+   }
+   .btn.btn-close{
+      display:block
+   }
+   .nav{
+      overflow:hidden
+   }
+   .pagename{
+      margin-top:-18px;
+   }
+   .nav:active,.nav:focus{
+      height:auto
+   }
+   .nav div:before{
+      background:#000;
+      border-bottom:10px double;
+      border-top:3px solid;
+      content:'';
+      float:right;
+      height:4px;
+      position:relative;
+      right:2px;
+      top:25px;
+      width:25px
+   }
+   .nav a{
+      display:block;
+      padding:.5em 0;
+      width:85%
+   }
+}
