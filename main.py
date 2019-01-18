@@ -110,7 +110,7 @@ class TeachingSched4(webapp2.RequestHandler):
             'title': "The Evolution of Complexity",
             'number': "PHIL460",
             'semester': "Spring 2019",
-            # 'source': 'includes/schedule_s19_phil255.html',
+            'source': 'includes/schedule_s19_phil460.html',
             'id_jump': id_jump,
             'week_jump': week_jump
         }
