@@ -42,14 +42,16 @@ def processHTML(path_to_tex):
 path_res = os.path.join(path_web, 'latex/research/research.tex')
 path_pubs = os.path.join(path_web, 'latex/my-pubs/my-pubs.tex')
 
-path_sched1 = os.path.join(path_web, 'latex/schedules/schedule_f18_phil255/schedule_f18_phil255.tex')
-path_sched2 = os.path.join(path_web, 'latex/schedules/schedule_f18_phil342/schedule_f18_phil342.tex')
+# path_sched1 = os.path.join(path_web, 'latex/schedules/schedule_f18_phil255/schedule_f18_phil255.tex')
+# path_sched2 = os.path.join(path_web, 'latex/schedules/schedule_f18_phil342/schedule_f18_phil342.tex')
 path_sched3 = os.path.join(path_web, 'latex/schedules/schedule_s19_phil255/schedule_s19_phil255.tex')
+path_sched4 = os.path.join(path_web, 'latex/schedules/schedule_s19_phil255/schedule_s19_phil460.tex')
 
 processHTML(path_res)
 processHTML(path_pubs)
-processHTML(path_sched1)
-processHTML(path_sched2)
+# processHTML(path_sched1)
+# processHTML(path_sched2)
 processHTML(path_sched3)
+processHTML(path_sched4)
 
 
