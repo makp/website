@@ -258,17 +258,18 @@ span.reverse {
 
 .nav,.nav .current,.nav a:hover{
    background:#323232;
-   /* background:#000; */
+   background: #11024e;
    color:#fff
 }
 
 .nav{
+
    height:2em;
    padding:1em .2em 1em 	/*above, sides, bottom*/
 }
 
 .nav a{
-   color:#aaa;
+   color:#dedede;
    padding-right:1em;
    position:relative;
    font-size:1.1em;
