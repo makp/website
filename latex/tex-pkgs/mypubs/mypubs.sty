@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mypubs}[LaTeX package for displaying my pubs]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[american]{babel}
+
+\RequirePackage[backend=biber,refsection=section,sorting=ydnt,style=authoryear]{biblatex}
+\RequirePackage{biblatex-tweaks}
+\RequirePackage{hyperref}
+\addbibresource{/home/makmiller/Documents/mydocs/websites/website-main/latex/tex-bib/my-pubs.bib}
+
+\DeclareLabeldate{%
+  \field{date}
+  \field{year}
+  \field{eventdate}
+  \field{origdate}
+  \field{urldate}
+  \field{pubstate}
+  \literal{nodate}
+}
+
+\renewbibmacro*{addendum+pubstate}{%
+  \printfield{addendum}%
+  \iffieldequalstr{labeldatesource}{pubstate}{}
+  {\newunit\newblock\printfield{pubstate}}}
+
+
+\RequirePackage{graphicx}
+
+\RequirePackage{lineno}
+\RequirePackage{setspace}
