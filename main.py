@@ -70,8 +70,8 @@ class TeachingSched1(webapp2.RequestHandler):
         template_values = {
             'title': "Environmental Ethics",
             'number': "PHIL255",
-            'semester': "Fall 2018",
-            'source': 'includes/schedule_f18_phil255.html',
+            'semester': "Fall 2019",
+            'source': 'includes/schedule_f19_phil255.html',
             'id_jump': id_jump,
             'week_jump': week_jump
         }
