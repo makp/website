@@ -94,10 +94,10 @@ class TeachingSched2(webapp2.RequestHandler):
 class TeachingSched3(webapp2.RequestHandler):
     def get(self):
         template_values = {
-            'title': "Environmental Ethics",
-            'number': "PHIL255",
-            'semester': "Spring 2019",
-            'source': 'includes/schedule_s19_phil255.html',
+            'title': "Sex, Death, & Outlaws",
+            'number': "PHIL212",
+            'semester': "Spring 2020",
+            'source': 'includes/schedule_s20_phil212.html',
             'id_jump': id_jump,
             'week_jump': week_jump
         }
