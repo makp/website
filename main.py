@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import jinja2
 import os
 import datetime
@@ -20,7 +20,6 @@ id_jump = 'Week' + str(week_jump)
 @app.route('/')
 def home():
     return render_template('index.html')
-
 
 @app.route('/pubs')
 def publications():
@@ -91,6 +90,11 @@ def schedule5():
             'week_jump': week_jump
         }
         return render_template('schedule.html', **template_values)
+
+@app.route('/slides')
+def slides():
+    return redirect("https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/EudQRinLZvhLqz8UkvrszYoBpdIdjYj38-ZRBNOOU76Kaw?e=rC1EFu")
+
     
 # start the server with the 'run()' method
 if __name__ =="__main__":
