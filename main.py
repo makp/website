@@ -5,7 +5,8 @@ import datetime
 import time
 
 
-app = Flask(__name__, template_folder = 'pages')
+app = Flask(__name__)
+# , template_folder = 'pages'
 
 # 
 date_today = datetime.datetime.now() # .strftime('%Y, %m, %d')
