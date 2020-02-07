@@ -11,7 +11,7 @@ app = Flask(__name__)
 # 
 date_today = datetime.datetime.now() # .strftime('%Y, %m, %d')
 week_today = date_today.isocalendar()[1]
-week_first = datetime.date(2019, 8, 26).isocalendar()[1]
+week_first = datetime.date(2020, 1, 27).isocalendar()[1]
 week_jump = (week_today - week_first) + 1
 # week_jump = 2
 id_jump = 'Week' + str(week_jump)
