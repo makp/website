@@ -1,22 +1,10 @@
-runtime: python27
-api_version: 1
-threadsafe: true
+runtime: python37
 
-handlers:
-- url: /stylesheets
-  static_dir: stylesheets
+# handlers:
+# - url: /.*
+#   script: auto
 
-- url: /images
-  static_dir: images
-
-- url: /pdfs
-  static_dir: pdfs
-
-- url: /.*
-  script: main.application
-
-libraries:
-- name: jinja2
-  version: latest
-- name: webapp2
-  version: latest
+# - url: /docs
+#   static_dir: static/docs
+# - url: /images
+#   static_dir: images
