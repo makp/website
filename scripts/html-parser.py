@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 path_web = '/home/makmiller/Documents/mydocs/websites/website-main/'
 path_conf = '/home/makmiller/Documents/mydocs/websites/website-main/scripts/myconfig.cfg'
-path_dest = '/home/makmiller/Documents/mydocs/websites/website-main/pages/includes/'
+path_dest = '/home/makmiller/Documents/mydocs/websites/website-main/templates/includes/'
 
 def processHTML(path_to_tex):
     subprocess.call(['./generate-html.sh', path_to_tex, path_conf]) # compile tex file
