@@ -1,8 +1,5 @@
 from flask import Flask, render_template, redirect
-import jinja2
-import os
 import datetime
-import time
 
 
 app = Flask(__name__)
