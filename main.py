@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 date_today = datetime.datetime.now()  # .strftime('%Y, %m, %d')
 week_today = date_today.isocalendar()[1]
-week_first = datetime.date(2020, 1, 27).isocalendar()[1]
+week_first = datetime.date(2021, 8, 30).isocalendar()[1]
 week_jump = (week_today - week_first) + 1
 # week_jump = 2
 id_jump = 'Week' + str(week_jump)
@@ -90,8 +90,8 @@ def schedule5():
     template_values = {
         'title': "Environmental Ethics",
         'number': "PHIL255",
-        'semester': "Spring 2020",
-        'source': 'includes/schedule_s20_phil255.html',
+        'semester': "Fall 2021",
+        'source': 'includes/schedule_f21_phil255.html',
         'id_jump': id_jump,
         'week_jump': week_jump
     }
