@@ -5,8 +5,8 @@ import subprocess
 from bs4 import BeautifulSoup
 
 path_web = '/home/makmiller/Documents/mydocs/websites/website-main/'
-path_conf = '/home/makmiller/Documents/mydocs/websites/website-main/scripts/myconfig.cfg'
-path_dest = '/home/makmiller/Documents/mydocs/websites/website-main/templates/includes/'
+path_conf = path_web + 'scripts/myconfig.cfg'
+path_dest = path_web + 'templates/includes/'
 
 
 def processHTML(path_to_tex):
