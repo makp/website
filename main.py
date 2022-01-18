@@ -40,8 +40,8 @@ def schedule1():
     template_values = {
         'title': "Environmental Ethics",
         'number': "PHIL255",
-        'semester': "Fall 2019",
-        'source': 'includes/schedule_f19_phil255.html',
+        'semester': "Spring 2021",
+        'source': 'includes/schedule_s21_phil255.html',
         'id_jump': id_jump,
         'week_jump': week_jump}
     return render_template('schedule.html', **template_values)
