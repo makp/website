@@ -98,10 +98,9 @@ def schedule5():
     return render_template('schedule.html', **template_values)
 
 
-@app.route('/slides')
+@app.route('/extra')
 def slides():
-    return redirect("https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/EudQRinLZvhLqz8UkvrszYoBpdIdjYj38-ZRBNOOU76Kaw?e=rC1EFu")
-
+    return redirect("https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/Ep8gC8AZpFJAi_Dyw6hA5SsBbWs1NxlaKtJIvpLBVIl5KQ?e=6Xqu1w")
 
 # start the server with the 'run()' method
 if __name__ == "__main__":
