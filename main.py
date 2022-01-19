@@ -98,6 +98,18 @@ def schedule5():
     return render_template('schedule.html', **template_values)
 
 
+@app.route('/schedule6')
+def schedule6():
+    template_values = {
+        'title': "What Makes Us Moral",
+        'number': "PHIL342",
+        'semester': "Spring 2022",
+        'source': 'includes/schedule_f18_phil342.html',
+        'id_jump': id_jump,
+        'week_jump': week_jump}
+    return render_template('schedule.html', **template_values)
+
+
 @app.route('/extra')
 def slides():
     return redirect("https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/Ep8gC8AZpFJAi_Dyw6hA5SsBbWs1NxlaKtJIvpLBVIl5KQ?e=6Xqu1w")
