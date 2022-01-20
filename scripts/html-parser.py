@@ -49,6 +49,7 @@ path_sched1 = os.path.join(path_web, 'latex/schedules/schedule_s21_phil255/sched
 # path_sched3 = os.path.join(path_web, 'latex/schedules/schedule_s20_phil212/schedule_s20_phil212.tex')
 # path_sched4 = os.path.join(path_web, 'latex/schedules/schedule_s19_phil460/schedule_s19_phil460.tex')
 # path_sched5 = os.path.join(path_web, 'latex/schedules/schedule_f21_phil255/schedule_f21_phil255.tex')
+path_sched6 = os.path.join(path_web, 'latex/schedules/schedule_s22_phil342/schedule_s22_phil342.tex')
 
 
 # processHTML(path_res)
@@ -57,5 +58,4 @@ processHTML(path_sched1)
 # processHTML(path_sched2)
 # processHTML(path_sched3)
 # processHTML(path_sched4)
-
-
+processHTML(path_sched6)

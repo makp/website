@@ -104,7 +104,7 @@ def schedule6():
         'title': "What Makes Us Moral",
         'number': "PHIL342",
         'semester': "Spring 2022",
-        'source': 'includes/schedule_f18_phil342.html',
+        'source': 'includes/schedule_s22_phil342.html',
         'id_jump': id_jump,
         'week_jump': week_jump}
     return render_template('schedule.html', **template_values)
