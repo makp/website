@@ -4,11 +4,12 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[american]{babel}
 
-\RequirePackage[backend=biber,refsection=section,sorting=ydnt,style=authoryear]{biblatex}
+\RequirePackage[backend=biber,sorting=ydnt,style=authoryear]{biblatex}
+% FIXME: htlatex has problems with the option refsection=section. However, removing this option breaks the research.html page.
+
 \RequirePackage{biblatex-tweaks}
 \RequirePackage{hyperref}
 \addbibresource{/home/makmiller/Documents/mydocs/websites/website-main/latex/tex-bib/my-pubs.bib}
-
 \DeclareLabeldate{%
   \field{date}
   \field{year}
