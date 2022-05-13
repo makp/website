@@ -53,9 +53,9 @@ path_sched6 = os.path.join(path_web, 'latex/schedules/schedule_s22_phil342/sched
 
 
 # processHTML(path_res)
-# processHTML(path_pubs)
-processHTML(path_sched1)
+processHTML(path_pubs)
+# processHTML(path_sched1)
 # processHTML(path_sched2)
 # processHTML(path_sched3)
 # processHTML(path_sched4)
-processHTML(path_sched6)
+# processHTML(path_sched6)
