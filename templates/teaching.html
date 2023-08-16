@@ -5,10 +5,9 @@
   <h2>{{ semester }}</h2>
 </div>
 
-{% for course_number, course_info in courses.items() %}
+{% for course_code, course_info in courses.items() %}
 <div class="course-description">
-  <h2>{{ course_info['course_name'] }}</h2>
-
+  <h3> {{ course_code }}: {{ course_info['course_name'] }} </h3>
   {% if course_info.description %}
   {% include course_info.description %}
   {% else %}
