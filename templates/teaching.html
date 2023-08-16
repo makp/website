@@ -2,27 +2,15 @@
 {% block content %}
 
 <div class="maketitle">
-    <h2>Spring 2023</h2>
+  <h2>{{ semester }}</h2>
 </div>
 
-{% include 'includes/course-description-phil255.html' %}
-<a href="/schedule1" class="btn btn-sm btn-a">View Schedule</a>
-
-
-{% include 'includes/course-description-phil342.html' %}
-<a href="/schedule6" class="btn btn-sm btn-a">View Schedule</a>
-
-<div class="maketitle">
-  <h2>Past Semesters</h2>
+{% for course_number, course_info in courses.items() %}
+<div class="course-description">
+  <h3>{{ course_info['course_name'] }}</h3>
+  {% include course_info['description'] %}
+  <a href="/schedule/{{ loop.index }}" class="btn btn-sm btn-a">View Schedule</a>
 </div>
-
-<a href="/schedule2"> PHIL342 - Fall 2022</a>
-<br>
-<a href="/schedule5"> PHIL255 - Fall 2022</a>
-<br>
-<a href="/schedule3"> PHIL212 - Spring 2020</a>
-<br>
-<a href="/schedule4"> PHIL460 - Spring 2019</a>
-<br>
+{% endfor %}
 
 {% endblock %}

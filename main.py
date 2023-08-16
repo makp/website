@@ -33,11 +33,14 @@ def research():
 
 @app.route('/teaching')
 def teaching():
-    return render_template('teaching.html')
+    current_semester = CURRENT_SEMESTER.replace('_', ' ')
+    courses_info = semesters[CURRENT_SEMESTER]
+    return render_template('teaching.html', semester=current_semester, courses=courses_info)
 
 
 @app.route('/schedule/<int:schedule_id>')
 def schedule(schedule_id):
+    schedule_id = schedule_id - 1
     current_schedules = semesters[CURRENT_SEMESTER]
     schedules = []
     for course_number, course_info in current_schedules.items():
