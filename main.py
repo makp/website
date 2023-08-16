@@ -5,15 +5,17 @@ import datetime
 app = Flask(__name__)
 
 
-date_today = datetime.datetime.now()  # .strftime('%Y, %m, %d')
-week_today = date_today.isocalendar()[1]
-week_first = datetime.date(2021, 8, 30).isocalendar()[1]
-week_jump = (week_today - week_first) + 1
-# week_jump = 2
-id_jump = 'Week' + str(week_jump)
+# def calculate_week_jump():
+#     date_today = datetime.datetime.now()
+#     week_today = date_today.isocalendar()[1]
+#     week_first = datetime.date(2021, 8, 30).isocalendar()[1]
+#     return (week_today - week_first) + 1
 
 
-# use decorators to map a URL to a function
+# week_jump = calculate_week_jump()
+# id_jump = 'Week' + str(week_jump)
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -47,8 +49,8 @@ def schedule(schedule_id):
          'source': 'includes/schedule_s23_phil255.html'},
     ]
     template_values = schedules[schedule_id]
-    template_values['id_jump'] = id_jump
-    template_values['week_jump'] = week_jump
+    # template_values['id_jump'] = id_jump
+    # template_values['week_jump'] = week_jump
     return render_template('schedule.html', **template_values)
 
 

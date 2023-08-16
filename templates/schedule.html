@@ -4,21 +4,18 @@
 <div class="maketitle">
   <h2>  {{ title }} </h2>
   <h4> {{ number }} &ndash; {{ semester }}
-      {% if week_jump > 0 %}
-    <br>
-    <a href="#{{ id_jump }}"> <small> &#8675; jump to current week</small></a>
-    {% endif %}
   </h4>
 </div>
 
 <div class="note">
-  {% include 'includes/note-access.html' %}
+    {% include 'includes/note-access.html' %}
 </div>
 
-<!-- <p>
-
-     </p> -->
-<!-- <p>Today's date is {{ week_jump }}</p> -->
+<!-- Commented old code -->
+{#
+{% if week_jump > 0 %} <br> <a href="#{{ id_jump }}"> <small> &#8675; jump to current week</small></a> {% endif %}
+<p>Today's date is {{ week_jump }}</p>
+#}
 
 {% include source %}
 
