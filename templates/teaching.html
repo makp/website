@@ -7,8 +7,14 @@
 
 {% for course_number, course_info in courses.items() %}
 <div class="course-description">
-  <h3>{{ course_info['course_name'] }}</h3>
-  {% include course_info['description'] %}
+  <h2>{{ course_info['course_name'] }}</h2>
+
+  {% if course_info.description %}
+  {% include course_info.description %}
+  {% else %}
+  <p> </p>
+  {% endif %}
+
   <a href="/schedule/{{ loop.index }}" class="btn btn-sm btn-a">View Schedule</a>
 </div>
 {% endfor %}
