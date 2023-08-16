@@ -14,7 +14,7 @@ semesters = {
         'PHIL212': {
             'course_name': 'Honors Seminar',
             'schedule_tex': '',
-            'schedule_html': 'includes/schedule_f23_phil103.html',
+            'schedule_html': 'includes/schedule_f23_phil212.html',
             'syllabus_tex': '',
             'syllabus_url': '',
             'description': ''
