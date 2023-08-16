@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect
-import datetime
+from courses_info import CURRENT_SEMESTER, semesters
 
 
 app = Flask(__name__)
@@ -38,16 +38,14 @@ def teaching():
 
 @app.route('/schedule/<int:schedule_id>')
 def schedule(schedule_id):
-    schedules = [
-        {"title": "Introduction to Ethics",
-         'number': "PHIL103",
-         'semester': "Fall 2023",
-         'source': 'includes/schedule_s23_phil255.html'},
-        {'title': "",
-         'number': "PHILXXX",
-         'semester': "Fall 2023",
-         'source': 'includes/schedule_s23_phil255.html'},
-    ]
+    current_schedules = semesters[CURRENT_SEMESTER]
+    schedules = []
+    for course_number, course_info in current_schedules.items():
+        schedules.append(
+            {"title": course_info['course_name'],
+             'number': course_number,
+             'semester': CURRENT_SEMESTER.replace('_', ' '),
+             'source': course_info['schedule_html']})
     template_values = schedules[schedule_id]
     # template_values['id_jump'] = id_jump
     # template_values['week_jump'] = week_jump

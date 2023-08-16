@@ -1,10 +1,19 @@
+CURRENT_SEMESTER = 'Fall_2023'
+
+
 semesters = {
     'Fall_2023': {
-        'course_name': 'Introduction to Ethics',
-        'course_number': 'PHIL103',
-        'schedule_tex': '',
-        'schedule_html': '',
-        'syllabus_tex': '',
-        'syllabus_url': '',
-    }
-}
+        'PHIL103': {
+            'course_name': 'Introduction to Ethics',
+            'schedule_tex': '',
+            'schedule_html': 'includes/schedule_f23_phil103.html',
+            'syllabus_tex': '',
+            'syllabus_url': '',
+        },
+        'PHIL212': {
+            'course_name': 'Honors Seminar',
+            'schedule_tex': '',
+            'schedule_html': 'includes/schedule_f23_phil103.html',
+            'syllabus_tex': '',
+            'syllabus_url': '',
+        }}}
