@@ -3,7 +3,6 @@ import datetime
 
 
 app = Flask(__name__)
-# , template_folder = 'pages'
 
 
 date_today = datetime.datetime.now()  # .strftime('%Y, %m, %d')
@@ -33,6 +32,20 @@ def research():
 @app.route('/teaching')
 def teaching():
     return render_template('teaching.html')
+
+
+@app.route('/schedule/<int:schedule_id>')
+def schedule(schedule_id):
+    schedules = [
+        {"title": "Introduction to Ethics",
+         'number': "PHIL103",
+         'semester': "Fall 2023",
+         'source': 'includes/schedule_s23_phil255.html'},
+    ]
+    template_values = schedules[schedule_id]
+    template_values['id_jump'] = id_jump
+    template_values['week_jump'] = week_jump
+    return render_template('schedule.html', **template_values)
 
 
 @app.route('/schedule1')
