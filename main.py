@@ -41,85 +41,14 @@ def schedule(schedule_id):
          'number': "PHIL103",
          'semester': "Fall 2023",
          'source': 'includes/schedule_s23_phil255.html'},
+        {'title': "",
+         'number': "PHILXXX",
+         'semester': "Fall 2023",
+         'source': 'includes/schedule_s23_phil255.html'},
     ]
     template_values = schedules[schedule_id]
     template_values['id_jump'] = id_jump
     template_values['week_jump'] = week_jump
-    return render_template('schedule.html', **template_values)
-
-
-@app.route('/schedule1')
-def schedule1():
-    template_values = {
-        'title': "Environmental Ethics",
-        'number': "PHIL255",
-        'semester': "Spring 2023",
-        'source': 'includes/schedule_s23_phil255.html',
-        'id_jump': id_jump,
-        'week_jump': week_jump}
-    return render_template('schedule.html', **template_values)
-
-
-@app.route('/schedule2')
-def schedule2():
-    template_values = {
-        'title': "What Makes Us Moral",
-        'number': "PHIL342",
-        'semester': "Fall 2022",
-        'source': 'includes/schedule_f22_phil342.html',
-        'id_jump': id_jump,
-        'week_jump': week_jump}
-    return render_template('schedule.html', **template_values)
-
-
-@app.route('/schedule3')
-def schedule3():
-    template_values = {
-        'title': "Sex, Death, & Outlaws",
-        'number': "PHIL212",
-        'semester': "Spring 2020",
-        'source': 'includes/schedule_s20_phil212.html',
-        'id_jump': id_jump,
-        'week_jump': week_jump
-    }
-    return render_template('schedule.html', **template_values)
-
-
-@app.route('/schedule4')
-def schedule4():
-    template_values = {
-        'title': "The Evolution of Complexity",
-        'number': "PHIL460",
-        'semester': "Spring 2019",
-        'source': 'includes/schedule_s19_phil460.html',
-        'id_jump': id_jump,
-        'week_jump': week_jump
-    }
-    return render_template('schedule.html', **template_values)
-
-
-@app.route('/schedule5')
-def schedule5():
-    template_values = {
-        'title': "Environmental Ethics",
-        'number': "PHIL255",
-        'semester': "Fall 2022",
-        'source': 'includes/schedule_f22_phil255.html',
-        'id_jump': id_jump,
-        'week_jump': week_jump
-    }
-    return render_template('schedule.html', **template_values)
-
-
-@app.route('/schedule6')
-def schedule6():
-    template_values = {
-        'title': "What Makes Us Moral",
-        'number': "PHIL342",
-        'semester': "Spring 2023",
-        'source': 'includes/schedule_s23_phil342.html',
-        'id_jump': id_jump,
-        'week_jump': week_jump}
     return render_template('schedule.html', **template_values)
 
 
