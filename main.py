@@ -35,7 +35,9 @@ def research():
 def teaching():
     current_semester = CURRENT_SEMESTER.replace('_', ' ')
     courses_info = semesters[CURRENT_SEMESTER]
-    return render_template('teaching.html', semester=current_semester, courses=courses_info)
+    return render_template('teaching.html',
+                           semester=current_semester,
+                           courses=courses_info)
 
 
 @app.route('/schedule/<int:schedule_id>')
@@ -57,7 +59,10 @@ def schedule(schedule_id):
 
 @app.route('/extra')
 def slides():
-    return redirect("https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/Ep8gC8AZpFJAi_Dyw6hA5SsB4z21Ziu98-iGHnd6zdJXwQ?e=cySgLo")
+    return redirect(
+        "https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/"
+        "Ep8gC8AZpFJAi_Dyw6hA5SsB4z21Ziu98-iGHnd6zdJXwQ?e=cySgLo")
+
 
 # start the server with the 'run()' method
 if __name__ == "__main__":
