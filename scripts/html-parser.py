@@ -49,11 +49,11 @@ path_res = os.path.join(path_web, 'latex/research/research.tex')
 path_pubs = os.path.join(path_web, 'latex/my-pubs/my-pubs.tex')
 
 path_sched1 = os.path.join(
-    path_web,
-    'latex/schedules/schedule_f23_phil103/schedule_f23_phil103.tex')
+    path_web, 'website_data',
+    'latex/schedules/schedule_s24_phil255/schedule_s24_phil255.tex')
 path_sched2 = os.path.join(
-    path_web,
-    'latex/schedules/schedule_f23_phil212/schedule_f23_phil212.tex')
+    path_web, 'website_data',
+    'latex/schedules/schedule_s24_phil212/schedule_s24_phil212.tex')
 
 
 # processHTML(path_res)
