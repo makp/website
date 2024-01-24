@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
 
-import os.path
+import os
 import subprocess
 from bs4 import BeautifulSoup
 
-path_web = '/home/makmiller/Documents/mydocs/websites/website-main/'
-path_conf = path_web + 'scripts/myconfig.cfg'
-path_dest = path_web + 'templates/includes/'
+path_web = os.getcwd()
+path_conf = os.path.join(path_web, 'scripts/myconfig.cfg')
+path_dest = os.path.join(path_web, 'templates/includes/')
 
 
 def processHTML(path_to_tex):
     """Compile LaTeX file and convert to HTML."""
-    subprocess.call(['./generate-html.sh', path_to_tex, path_conf])  # compile tex file
+    # Compile tex file
+    subprocess.call(['./generate-html.sh', path_to_tex, path_conf])
 
-    path_base = os.path.splitext(os.path.basename(path_to_tex))[0]  # basename without extension
+    # Return basename without extension
+    path_base = os.path.splitext(os.path.basename(path_to_tex))[0]
     path_dir = os.path.dirname(path_to_tex)  # dirname
     path_to_soup = os.path.join(path_dir, path_base + '.html')
 
-    # use Python built-in HTML parser
+    # Use Python built-in HTML parser
     soup = BeautifulSoup(open(path_to_soup), 'html.parser')
 
     body_tag = soup.body        # extract body tag
