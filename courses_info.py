@@ -23,7 +23,7 @@ semesters = {
         'PHIL255': {
             'course_name': 'Environmental Ethics',
             'schedule_tex': '',
-            'schedule_html': '',
+            'schedule_html': 'includes/schedule_s24_phil255.html',
             'syllabus_tex': '',
             'syllabus_url': '',
             'description': 'includes/course-description-phil255.html'
@@ -31,7 +31,7 @@ semesters = {
         'PHIL212': {
             'course_name': 'Honors Seminar',
             'schedule_tex': '',
-            'schedule_html': '',
+            'schedule_html': 'includes/schedule_s24_phil212.html',
             'syllabus_tex': '',
             'syllabus_url': '',
             'description': 'includes/course-description-phil212.html'
