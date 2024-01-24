@@ -7,12 +7,13 @@ from bs4 import BeautifulSoup
 path_web = os.getcwd()
 path_conf = os.path.join(path_web, 'scripts/myconfig.cfg')
 path_dest = os.path.join(path_web, 'templates/includes/')
+path_sh = os.path.join(path_web, 'scripts/generate-html.sh')
 
 
 def processHTML(path_to_tex):
     """Compile LaTeX file and convert to HTML."""
     # Compile tex file
-    subprocess.call(['./generate-html.sh', path_to_tex, path_conf])
+    subprocess.call([path_sh, path_to_tex, path_conf])
 
     # Return basename without extension
     path_base = os.path.splitext(os.path.basename(path_to_tex))[0]
