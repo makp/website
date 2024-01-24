@@ -1,4 +1,4 @@
-CURRENT_SEMESTER = 'Fall_2023'
+CURRENT_SEMESTER = 'Spring_2024'
 
 
 semesters = {
@@ -18,4 +18,22 @@ semesters = {
             'syllabus_tex': '',
             'syllabus_url': '',
             'description': 'includes/course-description-phil212.html'
-        }}}
+        }},
+    'Spring_2024': {
+        'PHIL255': {
+            'course_name': 'Environmental Ethics',
+            'schedule_tex': '',
+            'schedule_html': '',
+            'syllabus_tex': '',
+            'syllabus_url': '',
+            'description': 'includes/course-description-phil255.html'
+        },
+        'PHIL212': {
+            'course_name': 'Honors Seminar',
+            'schedule_tex': '',
+            'schedule_html': '',
+            'syllabus_tex': '',
+            'syllabus_url': '',
+            'description': 'includes/course-description-phil212.html'
+        }}
+}
