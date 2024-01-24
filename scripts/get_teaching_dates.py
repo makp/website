@@ -43,14 +43,14 @@ def list_dates(first, last, no_class=[], weekdays=[0, 2]):
     return lst_days
 
 
-def generate_filename(lst, output_dir):
+def generate_filename(lst, relative_dir):
     """
     Return filename based on class semester and year.
 
     :param lst: A list of dates.
-    :param output_dir: The directory where `lst` will be saved.
+    :param output_dir: The relatiev dir where `lst` will be saved.
 
-    :return: A string representing the filename.
+    :return: A string representing fullpath to file.
     """
     if not lst:
         raise ValueError("Empty list!")
@@ -67,14 +67,16 @@ def generate_filename(lst, output_dir):
 
     file_name = f"teachingDates{term}{year}.txt"
 
+    output_dir = os.path.abspath(relative_dir)
+
     return os.path.join(output_dir, file_name)
 
 
-def save_dates(lst, output_dir="."):
+def save_teaching_dates(lst, relative_dir="."):
     """Write list of dates to a file."""
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    filename = generate_filename(lst, relative_dir)
 
-    file_name = generate_filename(lst, output_dir)
-    with open(file_name, 'w') as f:
+    with open(filename, 'w') as f:
         f.write(', '.join(lst))
+
+    print(f"Saved {filename}")
