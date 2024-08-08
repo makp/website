@@ -14,7 +14,7 @@ semesters = {
         "PHIL342": {
             "course_name": "What Makes Us Moral",
             "schedule_tex": "",
-            "schedule_html": "",
+            "schedule_html": "includes/schedule_f24_phil342.html",
             "syllabus_tex": "",
             "syllabus_url": "",
             "description": "includes/course-description-phil342.html",

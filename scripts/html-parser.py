@@ -57,7 +57,7 @@ path_sched1 = os.path.join(
 path_sched2 = os.path.join(
     path_web,
     "website_data",
-    "latex/schedules/",
+    "latex/schedules/schedule_f24_phil342/schedule_f24_phil342.tex",
 )
 
 
