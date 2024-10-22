@@ -62,8 +62,7 @@ def schedule(schedule_id):
 @app.route("/extra")
 def slides():
     return redirect(
-        "https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/"
-        "Ep8gC8AZpFJAi_Dyw6hA5SsB4z21Ziu98-iGHnd6zdJXwQ?e=cySgLo"
+        "https://tu-my.sharepoint.com/:f:/g/personal/mpedroso_towson_edu/Ep8gC8AZpFJAi_Dyw6hA5SsB4z21Ziu98-iGHnd6zdJXwQ?e=XQ79wf"
     )
 
 
