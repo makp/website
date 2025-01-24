@@ -1,10 +1,9 @@
 """Return teaching dates for building course schedule."""
 
-from datetime import datetime, timedelta
 import os
+from datetime import datetime, timedelta
 
-
-DATE_FORMAT = '%m-%d-%y'
+DATE_FORMAT = "%m-%d-%y"
 
 
 def list_dates(
@@ -58,10 +57,10 @@ def generate_filename(lst, relative_dir):
         raise ValueError("Empty list!")
 
     first_date = datetime.strptime(lst[0], DATE_FORMAT)
-    first_month = first_date.strftime('%m')
-    year = first_date.strftime('%y')
+    first_month = first_date.strftime("%m")
+    year = first_date.strftime("%y")
 
-    terms = {'08': 'Fall', '01': 'Spring', '02': 'Spring'}
+    terms = {"08": "Fall", "01": "Spring", "02": "Spring"}
 
     term = terms.get(first_month)
     if not term:
@@ -78,7 +77,7 @@ def save_teaching_dates(lst, relative_dir="."):
     """Write list of dates to a file."""
     filename = generate_filename(lst, relative_dir)
 
-    with open(filename, 'w') as f:
-        f.write(', '.join(lst))
+    with open(filename, "w") as f:
+        f.write(", ".join(lst))
 
     print(f"Saved {filename}")
