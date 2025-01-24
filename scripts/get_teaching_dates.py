@@ -7,7 +7,9 @@ import os
 DATE_FORMAT = '%m-%d-%y'
 
 
-def list_dates(first, last, no_class=[], weekdays=[0, 2]):
+def list_dates(
+    first: str, last: str, no_class: list, weekdays: tuple[int, int] = (0, 2)
+):
     """
     Return list of teaching dates.
 
@@ -17,7 +19,7 @@ def list_dates(first, last, no_class=[], weekdays=[0, 2]):
     :param first: Start date as a string in 'mm-dd-yy' format.
     :param last: End date as a string in 'mm-dd-yy' format.
     :param no_class: Dates when there are no classes.
-    :param weekdays: A list of integers representing weekdays where
+    :param weekdays: A tuple of integers representing weekdays where
     Monday is 0 and Sunday is 6.
 
     :return: A list of dates in 'mm-dd-yy' format. Days in `no_class`
