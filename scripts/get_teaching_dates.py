@@ -10,7 +10,10 @@ DATE_FORMAT = "%m-%d-%y"
 
 
 def list_dates(
-    first: str, last: str, no_class: list | None, weekdays: tuple[int, int] = (0, 2)
+    first: str,
+    last: str,
+    no_class: list | None,
+    weekdays: tuple[int, int] = (0, 2),
 ) -> list[str]:
     """
     Return list of teaching dates.
@@ -59,6 +62,19 @@ def generate_filename(first_day: str, relative_dir: str) -> str:
     return os.path.join(os.path.abspath(relative_dir), file_name)
 
 
+def create_and_save_dates(
+    first: str,
+    last: str,
+    no_class: list | None,
+    dir_out: str,
+) -> None:
+    dates = list_dates(first, last, no_class)
+    filename = generate_filename(first, dir_out)
+    with open(filename, "w") as f:
+        f.write(", ".join(dates))
+    print(f"Saved dates to {filename}")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate teaching dates")
     parser.add_argument("first", type=str, help="First day of class (mm-dd-yy)")
@@ -79,8 +95,4 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    dates = list_dates(args.first, args.last, args.no_class)
-    filename = generate_filename(args.first, args.output)
-    with open(filename, "w") as f:
-        f.write(", ".join(dates))
-    print(f"Saved dates to {filename}")
+    create_and_save_dates(args.first, args.last, args.no_class, args.output)
