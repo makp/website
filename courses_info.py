@@ -1,7 +1,17 @@
-CURRENT_SEMESTER = "Fall_2024"
+CURRENT_SEMESTER = "Spring_2025"
 
 
 semesters = {
+    "Spring_2025": {
+        "PHIL255": {
+            "course_name": "Environmental Ethics",
+            "schedule_tex": "",
+            "schedule_html": "includes/schedule_s25_phil255.html",
+            "syllabus_tex": "",
+            "syllabus_url": "",
+            "description": "includes/course-description-phil255.html",
+        },
+    },
     "Fall_2024": {
         "PHIL255": {
             "course_name": "Environmental Ethics",

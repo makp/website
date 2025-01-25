@@ -44,24 +44,3 @@ def processHTML(path_to_tex):
     output_file = path_dest + path_base + ".html"
     with open(output_file, "w+") as f:
         print(body_tag.prettify(), file=f)
-
-
-path_res = os.path.join(path_web, "latex/research/research.tex")
-path_pubs = os.path.join(path_web, "latex/my-pubs/my-pubs.tex")
-
-path_sched1 = os.path.join(
-    path_web,
-    "website_data",
-    "latex/schedules/schedule_f24_phil255/schedule_f24_phil255.tex",
-)
-path_sched2 = os.path.join(
-    path_web,
-    "website_data",
-    "latex/schedules/schedule_f24_phil342/schedule_f24_phil342.tex",
-)
-
-
-# processHTML(path_res)
-# processHTML(path_pubs)
-processHTML(path_sched1)
-processHTML(path_sched2)
